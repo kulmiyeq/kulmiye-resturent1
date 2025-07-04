@@ -1,0 +1,311 @@
+  <!DOCTYPE html>  
+<html lang="en"> 
+<head>
+  <script type="module" src="firebase.js"></script>
+
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <title>Kulmiye Restaurant</title>
+
+
+  <!-- SEO Meta Tags -->   
+  <meta name="description" content="Kulmiye Restaurant in Kampala offers authentic Somali, African, and international meals in a cozy atmosphere. Order delicious food via WhatsApp." />
+  <meta name="keywords" content="Kulmiye Restaurant, Somali food, Kampala restaurant, African cuisine, order food online, delicious meals" />
+  <meta name="author" content="abdiqani kulmiye" />
+  <link rel="stylesheet" href="styles.css" /> 
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
+  <style>
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->    
+  <header>
+    <div class="header-overlay">
+      <div>
+        <h1>Kulmiye Restaurant</h1>
+        <p>Enjoy Delicious Meals in Kampala</p>
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#menu">Menu</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#order">Order</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+      
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Home -->
+  <section id="home">
+    <h2>Welcome to Our Restaurant!</h2>
+    <p>🍕🍟🥪 We offer the finest simple and delicious meals in a warm and cozy atmosphere. 🥙🥡🍖</p>
+    <a href="https://wa.me/256741216965?text=Hello%2C%20I%20would%20like%20to%20order%20food%20from%20Kulmiye%20Restaurant"
+       target="_blank" style="display:inline-block; background:#25D366; color:white;
+       padding:12px 20px; border-radius:8px; text-decoration:none; font-weight:bold;">
+       🍽️ Order via WhatsApp
+    </a>
+  </section>
+
+   <!-- Menu Section -->
+  <section id="menu">
+    <h2>Our Menu</h2>
+
+    <div class="menu-filters">
+      <button onclick="filterMenu('all')">All</button>
+      <button onclick="filterMenu('breakfast')">Breakfast</button>
+      <button onclick="filterMenu('lunch')">Lunch</button>
+      <button onclick="filterMenu('fruits')">Fruits</button>
+      <button onclick="filterMenu('drinks')">Drinks</button>
+      <button onclick="filterMenu('desserts')">Desserts</button>
+    </div>
+
+    <!-- Breakfast -->
+    <h3>🍳 Breakfast</h3>
+    <div class="menu-cards menu-category breakfast">
+      <div class="menu-card"><img src="images/dish13.jpg" alt="Omelette"><h4>Omelette with Toast</h4><p>UGX 30,000</p></div>
+      <div class="menu-card"><img src="images/dish14.jpg" alt="Pancakes"><h4>Pancakes with Honey</h4><p>UGX 29,000</p></div>
+      <div class="menu-card"><img src="images/dish15.jpg" alt="Chapati"><h4>Chapati with Chicken</h4><p>UGX 17,000</p></div>
+      <div class="menu-card"><img src="images/dish16.jpg" alt="Mandazi"><h4>Mandazi and Tea</h4><p>UGX 28,000</p></div>
+      <div class="menu-card"><img src="images/dish17.jpg" alt="Cereal"><h4>Cereal with Milk</h4><p>UGX 50,000</p></div>
+    </div>
+
+    <!-- Lunch -->
+    <h3>🍛 Lunch</h3>
+    <div class="menu-cards menu-category lunch">
+      <div class="menu-card"><img src="images/dish1.jpg" alt="Beef"><h4>Beef Soup</h4><p>UGX 15,000</p></div>
+      <div class="menu-card"><img src="images/dish2.jpg" alt="Steak"><h4>Grilled Beef Steak</h4><p>UGX 20,000</p></div>
+      <div class="menu-card"><img src="images/dish3.jpg" alt="Spaghetti"><h4>Spaghetti Bolognese</h4><p>UGX 18,000</p></div>
+      <div class="menu-card"><img src="images/dish4.jpg" alt="Salad"><h4>Veggie Salad</h4><p>UGX 12,000</p></div>
+      <div class="menu-card"><img src="images/dish5.jpg" alt="Pasta"><h4>Pasta Alfredo</h4><p>UGX 17,000</p></div>
+    </div>
+
+    <!-- Fruits -->
+    <h3>🍍 Fruits</h3>
+    <div class="menu-cards menu-category fruits">
+      <div class="menu-card"><img src="images/dish11.jpg" alt="Strawberry"><h4>Strawberry</h4><p>UGX 33,000</p></div>
+      <div class="menu-card"><img src="images/dish12.jpg" alt="avacado"><h4>avacado</h4><p>UGX 12,000</p></div>
+      <div class="menu-card"><img src="images/dish18.jpg" alt="Blueberry"><h4>Blueberry Strawberry</h4><p>UGX 15,000</p></div>
+    <div class="menu-card"><img src="images/dish24.jpg" alt="mixed fruit"><h4>mixed fruit</h4><p>UGX 18,000</p></div>
+    <div class="menu-card"><img src="images/dish25.jpg" alt="Watermelon Cubes"><h4>Watermelon Cubes</h4><p>UGX 18,000</p></div>
+   </div>
+
+    <!-- Drinks -->
+    <h3>🍹 Drinks</h3>
+    <div class="menu-cards menu-category drinks">
+      <div class="menu-card"><img src="images/dish6.jpg" alt="Pineapple"><h4>Pineapple Juice</h4><p>UGX 20,000</p></div>
+      <div class="menu-card"><img src="images/dish7.jpg" alt="Watermelon"><h4>Watermelon Juice</h4><p>UGX 15,000</p></div>
+      <div class="menu-card"><img src="images/dish8.jpg" alt="Pomegranate"><h4>Pomegranate Juice</h4><p>UGX 12,000</p></div>
+     <div class="menu-card"><img src="images/dish22.jpg" alt="Somali Spiced Tea"><h4>Somali Spiced Tea</h4><p>UGX 10,000</p></div>
+     <div class="menu-card"><img src="images/dish23.jpg" alt="apple Tea"><h4>apple Tea</h4><p>UGX 8,000</p></div>
+    </div>
+
+    <!-- Desserts -->
+    <h3>🍰 Desserts</h3>
+    <div class="menu-cards menu-category desserts">
+      <div class="menu-card"><img src="images/dish9.jpg" alt="Chocolate cake"><h4>Delicious Chocolate Cake</h4><p>UGX 53,000</p></div>
+      <div class="menu-card"><img src="images/dish10.jpg" alt="Sponge cake"><h4>Sponge Cake</h4><p>UGX 27,000</p></div>
+      <div class="menu-card"><img src="images/dish19.jpg" alt="Cheese cake"><h4>Cheese cake</h4><p>UGX 25,000</p></div>
+      <div class="menu-card"><img src="images/dish20.jpg" alt="RedVelvet Cake"><h4>RedVelvet Cake</h4><p>UGX 29,000</p></div>
+      <div class="menu-card"><img src="images/dish21.jpg" alt="Chocolate Cake"><h4>Chocolate Cake</h4><p>UGX 49,000</p></div>
+    </div>
+
+  </section>
+
+  <script>  //Defines a function to show/hide menu categories based on the selected filter.
+    function filterMenu(category) {
+      const allMenus = document.querySelectorAll('.menu-category');
+      allMenus.forEach(menu => {
+        if (category === 'all' || menu.classList.contains(category)) {
+          menu.style.display = 'flex';
+        } else {
+          menu.style.display = 'none';
+        }
+      });
+    }
+
+    // Show all by default
+    filterMenu('all');
+  </script>
+
+ <!-- Order -->
+<h2> 🛒Place Your Order</h2>
+<form id="orderForm">
+  <input type="text" id="name" placeholder="Your Name" required /><br/>
+  <input type="text" id="item" placeholder="Food ,Juice,Desserts,Fruits" required /><br/>
+  <input type="tel" id="number" placeholder="your number" required /><br/>
+  <input type="text" id="location" placeholder="Home address" required /><br/>
+  <button type="submit">Send Order</button>
+</form>
+
+<script type="module"> //Connects the web app to Firebase with your configuration.
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+  import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCSippwHaDb2W_fhlYL_6ZLRxUJkO2eHFk",
+    authDomain: "my-app-data-base-dd613.firebaseapp.com",
+    databaseURL: "https://my-app-data-base-dd613-default-rtdb.firebaseio.com",
+    projectId: "my-app-data-base-dd613",
+    storageBucket: "my-app-data-base-dd613.appspot.com",
+    messagingSenderId: "674849937723",
+    appId: "1:674849937723:web:0c24ad39c96ddf3ab3bf1e",
+    measurementId: "G-ZESXFP2G3E"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+
+  document.getElementById("orderForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const item = document.getElementById("item").value;
+    const number = document.getElementById("number").value;
+    const location = document.getElementById("location").value;
+
+    const order = { name, item, number, location };
+
+    const ordersRef = ref(database, 'orders');
+    push(ordersRef, order)
+      .then(() => {
+        alert("Order sent successfully!");
+        document.getElementById("orderForm").reset(); // Foomka nadiifi marka la submit gareeyo
+      })
+      .catch((error) => {
+        alert("Error: " + error.message);
+      });
+  });
+</script>
+
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="menu-cards">
+      <img src="images/gallery1.jpg" alt="Dish 1" style="border-radius:12px; max-width: 100%; margin-bottom: 15px;" />
+      <img src="images/gallery2.jpg" alt="Dish 2" style="border-radius:12px; max-width: 100%; margin-bottom: 15px;" />
+      <img src="images/gallery3.jpg" alt="Dish 3" style="border-radius:12px; max-width: 100%; margin-bottom: 15px;" />
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      Kulmiye Restaurant is a family-owned business located in Kampala, serving authentic Somali and African dishes.
+      Our mission is to provide tasty meals with excellent service in a warm atmosphere.
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>📍 Location: Plot 10, Kampala, Uganda</p>
+    <p>📞 Phone: +256 741 216 965</p>
+    <p>✉️ Email: info@kulmiyerestaurant.ug</p>
+
+    <!-- Google Maps Embed -->
+    <div style="width: 100%; height: 300px; margin-top: 15px; border-radius: 12px; overflow: hidden;">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.765340073326!2d32.55988487537173!3d0.31361127338524494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177db01de0f67e4b%3A0x6f06470dcb497d3a!2sKampala%2C%20Uganda!5e0!3m2!1sen!2sug!4v1687259389500!5m2!1sen!2sug"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </section>
+
+<!--Reviews-->
+  ⭐ Sample Customers Reviews for our Restaurant
+<section id="reviews">
+  <div class="review">
+    <h3>Great Food and Service</h3>
+    <p>★★★★★</p>
+    <p>I really enjoyed the meals here. The staff was friendly and the food was delicious. Highly recommended!</p>
+    <p><strong>- Amina K.</strong></p>
+  </div>
+
+  <div class="review">
+    <h3>Wonderful Experience</h3>
+    <p>★★★★☆</p>
+    <p>The environment was clean and comfortable. I loved the fast service and tasty dishes. Will come again!</p>
+    <p><strong>- John M.</strong></p>
+  </div>
+
+  <div class="review">
+    <h3>Best Restaurant in Town</h3>
+    <p>★★★★★</p>
+    <p>This place never disappoints. The portions are generous and everything is fresh. Great value for money!</p>
+    <p><strong>- Sarah L.</strong></p>
+  </div>
+</section>
+
+  <!-- Back to Top Button -->
+<button id="backToTopBtn" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- Footer -->
+
+  <footer>
+  <p>&copy; 2025 Kulmiye Restaurant. All Rights Reserved.</p>
+  <div class="social-icons">
+    <a href="https://www.facebook.com/kulmiyerestaurant" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://twitter.com/kulmiye_rest" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+    <a href="https://www.instagram.com/kulmiyerestaurant" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+  </div>
+</footer>
+
+  <script>
+    // Back to Top Button Show/Hide
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.style.display = 'block';
+      } else {
+        backToTopBtn.style.display = 'none';
+      }
+    });
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Fade-in animation on scroll for sections
+    const sections = document.querySelectorAll('section');
+    function checkSections() {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < triggerBottom) {
+          section.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', checkSections);
+    window.addEventListener('load', checkSections);
+
+    // Order form WhatsApp submission
+    document.getElementById('orderForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const details = document.getElementById('orderDetails').value.trim();
+
+      if (!name || !phone || !details) {
+        alert('Please fill all fields.');
+        return;
+      }
+
+      const message = `Hello, my name is ${encodeURIComponent(name)}. I would like to order: ${encodeURIComponent(details)}. Contact me at ${encodeURIComponent(phone)}.`;
+      const waUrl = `https://wa.me/256741216965?text=${message}`;
+      window.open(waUrl, '_blank');
+    });
+  </script>
+</body>
+</html>

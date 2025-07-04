@@ -1,0 +1,397 @@
+/* Reset default margins and paddings for all elements, and set box-sizing to border-box 
+   to include padding and border in the element's total width and height */
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+/* Smooth scrolling behavior when navigating to anchors within the page */
+html { 
+  scroll-behavior: smooth; 
+}
+
+/* Body styles: font, background color, text color, line spacing, and bottom padding */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* clean readable fonts */
+  background-color: #121212; /* dark background */
+  color: #e0e0e0; /* light gray text */
+  line-height: 1.6; /* line spacing */
+  padding-bottom: 50px; /* space at bottom */
+}
+
+/* Header section styling */
+header {
+  position: relative; /* relative positioning for layering */
+  height: 400px; /* fixed height */
+  background: url('images/header.jpg') center/cover no-repeat; /* background image centered and fully covered */
+  display: flex; /* flexbox for centering content */
+  justify-content: center; /* horizontal center */
+  align-items: center; /* vertical center */
+  text-align: center; /* center text */
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.4); /* dark transparent overlay for readability */
+  color: #c29696; /* light pinkish text */
+}
+
+/* Animation keyframes named "glow" for glowing text effect */
+@keyframes glow {
+  0%, 100% { 
+    text-shadow: 0 0 5px #ff7043, 0 0 10px #ff7043; /* subtle orange glow */
+    color: #ff7043; 
+  }
+  50% { 
+    text-shadow: 0 0 20px #ffab91; /* stronger glow in the middle */
+    color: #ffab91; 
+  }
+}
+
+/* Header overlay title styling with glow animation */
+.header-overlay h1 {
+  font-size: 3.5rem; /* large title */
+  animation: glow 3s infinite; /* apply glow animation infinitely */
+}
+
+/* Header overlay subtitle */
+.header-overlay p {
+  font-size: 1.5rem; /* medium text */
+  font-weight: 500; /* medium boldness */
+}
+
+/* Navigation bar margin */
+nav {
+  margin-top: 15px;
+}
+
+/* Navigation links styles */
+nav a {
+  color: #ffab91; /* light orange */
+  margin: 0 15px; /* horizontal spacing */
+  font-weight: 600; /* semi-bold */
+  text-decoration: none; /* no underline */
+  font-size: 1.1rem; /* slightly larger text */
+}
+
+/* Navigation links hover effect */
+nav a:hover {
+  color: #ff7043; /* darker orange on hover */
+}
+
+/* Section styles for content areas */
+section {
+  max-width: 1100px; /* max width for readability */
+  margin: 30px auto; /* centered with vertical margin */
+  padding: 0 15px; /* horizontal padding */
+  opacity: 0; /* initially invisible */
+  transform: translateY(20px); /* slightly moved down */
+  transition: opacity 0.8s ease, transform 0.8s ease; /* smooth fade and slide */
+}
+
+/* Section visible state: fully visible and positioned */
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Headings inside sections */
+h2 {
+  margin-bottom: 15px;
+  color: #ff7043; /* orange color */
+  font-size: 2rem; /* larger font */
+}
+
+/* Paragraph styles */
+p {
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  color: #ccc; /* light gray */
+}
+
+/* Button styles */
+button {
+  background: #ff7043; /* orange background */
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  border-radius: 8px; /* rounded corners */
+  cursor: pointer; /* pointer cursor on hover */
+  margin-top: 20px;
+  font-weight: bold;
+  transition: 0.3s ease; /* smooth transition */
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #e65c39; /* darker orange */
+}
+
+/* Grid container for menu cards */
+.menu-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* responsive columns */
+  gap: 25px;
+  margin-top: 30px;
+}
+.menu-filters {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.menu-filters button {
+  background-color: #25D366;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.menu-filters button:hover {
+  background-color: #1da851;
+}
+
+/* Individual menu card */
+.menu-card {
+  background: #1e1e1e; /* dark gray background */
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth hover */
+}
+
+/* Hover effect on menu card */
+.menu-card:hover {
+  transform: translateY(-8px); /* move card up */
+  box-shadow: 0 8px 25px rgba(255, 112, 67, 0.7); /* stronger shadow */
+}
+
+/* Menu card image styles */
+.menu-card img {
+  width: 100%;
+  max-width: 180px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+/* Menu card title */
+.menu-card h4 {
+  color: #ff7043; /* orange */
+  margin-bottom: 8px;
+}
+
+/* Menu card paragraph */
+.menu-card p {
+  color: #ccc; /* light gray */
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto 40px; /* centered with bottom margin */
+}
+
+/* Label styling */
+label {
+  font-weight: 600;
+  color: #ff7043; /* orange */
+}
+
+/* Inputs and textarea styling */
+input, textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #1e1e1e; /* dark background */
+  color: white;
+  font-size: 1rem;
+}
+
+/* Focus effect on input and textarea */
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 6px #ff7043; /* orange glow */
+}
+
+/* Specific order form styling */
+#orderForm {
+  max-width: 500px;
+  margin: 30px auto;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 112, 67, 0.6);
+}
+
+/* Inputs and textarea inside order form with custom styles */
+#orderForm input,
+#orderForm textarea {
+  background: #121212; /* darker background */
+  border: 1px solid #ff7043; /* orange border */
+  color: #e0e0e0;
+  font-size: 1rem;
+}
+
+/* Focus effect inside order form inputs */
+#orderForm input:focus,
+#orderForm textarea:focus {
+  border-color: #ffab91; /* lighter orange border */
+  box-shadow: 0 0 8px #ff7043; /* orange glow */
+}
+
+/* Submit button inside order form */
+#orderForm button[type="submit"] {
+  background-color: #ff7043;
+  color: white;
+  padding: 14px;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Submit button hover effect */
+#orderForm button[type="submit"]:hover {
+  background-color: #e65c39;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  color: #777;
+  margin-top: 40px;
+  padding: 15px;
+  border-top: 1px solid #333;
+}
+
+/* Footer links */
+footer a {
+  color: #ff7043;
+  margin: 0 8px;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+/* Footer links hover effect */
+footer a:hover {
+  color: #ffab91;
+}
+
+/* Back to Top Button styling */
+#backToTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 100;
+  background-color: #ff7043;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255,112,67,0.7);
+  display: none; /* hidden by default */
+  transition: background-color 0.3s ease;
+}
+
+/* Back to Top Button hover effect */
+#backToTopBtn:hover {
+  background-color: #e65c39;
+}
+
+/* Reviews container styles */
+#reviews {
+  background-color:  #1e1e1e; /* dark gray */
+  padding: 40px 30px;
+  max-width: 900px;
+  margin: 50px auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+  color: #f0f0f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Review section title */
+#reviews .section-title {
+  font-size: 2.5rem;
+  color: #ff7043;
+  font-weight: 900;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: 0 0 8px #ff7043;
+}
+
+/* Individual review card */
+.review {
+  background-color:  #911f03; /* dark red */
+  border-radius: 15px;
+  padding: 25px 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 18px rgba(255, 112, 67, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+/* Review hover effect */
+.review:hover {
+  transform: translateY(-10px) scale(1.02); /* lift and slightly enlarge */
+  box-shadow: 0 10px 30px rgba(255, 112, 67, 0.8);
+}
+
+/* Review author styling */
+.review .author {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #ffab91;
+  margin-top: 15px;
+  letter-spacing: 0.05em;
+}
+
+/* Star rating styling */
+.review .stars {
+  color: #ffc107; /* gold color */
+  font-size: 1.4rem;
+  margin: 10px 0;
+}
+
+/* Review text styling */
+.review .text {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 600px) {
+  #reviews {
+    padding: 30px 15px;
+  }
+  #reviews .section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  .review {
+    padding: 20px 15px;
+  }
+}
+
+/* Responsive styles for tablets and small desktops */
+@media (max-width: 768px) {
+  nav a {
+    display: block; /* stack links vertically */
+    margin: 5px 0;
+  }
+  .menu-cards {
+    grid-template-columns: 1fr; /* single column grid */
+  }
+}
